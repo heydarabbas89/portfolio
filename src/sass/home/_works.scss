@@ -57,8 +57,10 @@
 
         .work-thumb {
           width: 21rem;
+          height: 12rem;
           border-radius: 10px;
-          object-fit: cover;
+          object-fit: fill;
+          object-position: center;
         }
 
         .progress-box {
@@ -156,6 +158,7 @@
         a {
           .work-thumb {
             width: 34rem;
+            height: 18rem;
           }
         }
       }
@@ -218,13 +221,20 @@
       grid-template-columns: repeat(2, 1fr);
 
       .work {
+        transition-duration: 0.3s;
         a {
           .work-thumb {
             width: 23rem;
           }
+          &:has(img) {
+            cursor: pointer;
+          }
         }
       }
     }
+  }
+  .works-card .work-content .work:not(:has(.progress-box)):hover {
+    transform: scale(1.1);
   }
 }
 
