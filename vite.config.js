@@ -1,4 +1,4 @@
-import { resolve } from "path";
+// import { resolve } from "path";
 import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
@@ -10,13 +10,12 @@ export default defineConfig(({ mode }) => {
     server: {
       port: "3000",
     },
-    build: {
-      rollupOptions: {
-        input: {
-          main: resolve(__dirname, "index.html"),
-          works: resolve(__dirname, "pages/projects/index.html"),
-        },
-      },
-    },
+    // build: {
+    //   rollupOptions: {
+    //     input: {
+    //       main: resolve(__dirname, "index.html"),
+    //     },
+    //   },
+    // },
   };
 });

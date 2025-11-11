@@ -3,16 +3,23 @@
 @use "./../helpers/placeholders" as *;
 
 .works-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 1.25rem;
 
   .work-card {
+    box-shadow: 0 5px 20px $shadow_color;
+    border-radius: 10px;
+
     figure {
       text-align: center;
       color: $alt_color;
 
       img {
         width: 100%;
-        border-radius: 8px;
+        height: 14rem;
+        border-radius: 10px;
       }
 
       .caption {
@@ -26,17 +33,26 @@
 
 @media (width >= 40rem) {
   .works-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    width: 90%;
+    margin: 0 auto;
 
     .work-card {
       padding: 5px;
       border-radius: 10px;
-      box-shadow: 0 0 10px $shadow_color;
+
+      figure {
+        img {
+          height: 22rem;
+        }
+      }
     }
   }
 }
 
 @media (width >= 64rem) {
+  .works-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

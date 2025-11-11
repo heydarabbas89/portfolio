@@ -2,6 +2,9 @@ const icon = document.querySelector(".mdi--hamburger-menu");
 const navList = document.querySelector(".nav-list");
 const activePage = window.location.href;
 
+document.getElementsByClassName("copyYear").innerText =
+  new Date().getFullYear();
+
 document.querySelectorAll("nav ul li a").forEach((link) => {
   if (link.href === activePage) {
     link.classList.add("active");

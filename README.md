@@ -4,9 +4,6 @@
     <span style="font-size: 18px">https://heydarabbas89.github.io/portfolio</span>
   </a>
 </h1>
-<!-- <div align="center">
-  <img alt="Demo" src="" />
-</div> -->
 
 ### Built With
 
@@ -22,4 +19,3 @@ This project was built using these technologies.
 ## Show your support
 
 Give a ⭐ if you like this website!
-
