@@ -1,12 +1,8 @@
 import { resolve } from "path";
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "APP_");
-
+export default defineConfig(() => {
   return {
-    base: env.APP_BASE_URL,
-    envPrefix: "APP_",
     server: {
       port: "3000",
     },
@@ -14,7 +10,7 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, "index.html"),
-          works: resolve(__dirname, "/src/pages/works/index.html"),
+          works: resolve(__dirname, "works.html"),
         },
       },
     },
